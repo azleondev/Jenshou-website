@@ -1,0 +1,168 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: #fff;
+  overflow-x: hidden;
+  background: #0b0b0b;
+}
+
+/* ===== Background ===== */
+.bg {
+  position: fixed;
+     inset: 0;
+     z-index: -1;
+     background-image:
+       url("assets/bg.jpg"),
+       linear-gradient(
+         to bottom right,
+         rgba(255, 255, 255, 0),
+         rgba(100, 150, 255, 0.6),
+         rgba(164, 109, 233, 0.6)
+       );
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     background-attachment: fixed;
+     transition: background-size 0.3s ease, background-position 0.3s ease;
+}
+
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
+
+/* ===== Header ===== */
+.support-header {
+  text-align: center;
+  padding: 70px 20px 40px;
+}
+
+.support-header h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.support-header p {
+  font-size: 16px;
+  opacity: .85;
+  margin-top: 5px;
+}
+
+/* ===== Container ===== */
+.support-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto 80px;
+}
+
+/* ===== Section Box ===== */
+section {
+  background: rgba(255,255,255,0.13);
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(18px);
+  padding: 30px;
+  margin-bottom: 40px;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: fadeUp 0.8s ease;
+}
+
+section h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* ===== FAQ Section ===== */
+.faq-item {
+  margin-bottom: 18px;
+}
+
+.faq-btn {
+  width: 100%;
+  text-align: left;
+  padding: 14px 18px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.faq-btn:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease;
+  padding-left: 5px;
+}
+
+.faq-content p {
+  margin-top: 12px;
+  opacity: .9;
+  line-height: 1.6;
+}
+
+/* ===== Troubleshoot ===== */
+.troubleshoot-section ul {
+  list-style: none;
+  margin-left: 5px;
+}
+
+.troubleshoot-section li {
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+/* ===== Contact Box ===== */
+.contact-box {
+  padding: 15px 18px;
+  background: rgba(255,255,255,0.17);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  line-height: 1.7;
+}
+
+.contact-box ul {
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.contact-box li {
+  font-size: 15px;
+  margin: 6px 0;
+}
+
+/* ===== Footer ===== */
+.support-footer {
+  text-align: center;
+  font-size: 14px;
+  opacity: .7;
+  padding-bottom: 40px;
+}
+
+/* ===== Animation ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .support-header h1 { font-size: 32px; }
+  section { padding: 22px; }
+}
